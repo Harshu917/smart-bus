@@ -1,0 +1,11 @@
+{
+  "name": "smart-bus-transit-system",
+  "version": "1.0.0",
+  "description": "Smart Bus Real-time Tracking & Fleet Management System (React + Tailwind v4 + Node.js)",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "keywords": ["smart-bus", "real-time-tracking", "react", "tailwind-v4", "nodejs", "socketio", "leaflet"]
+}
