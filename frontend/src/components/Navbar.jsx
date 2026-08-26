@@ -127,16 +127,16 @@ export const Navbar = () => {
               </select>
             </div>
 
-            {/* Socket Status Pill */}
+            {/* Live Sync Status Pill */}
             <div
               className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono border ${
                 isConnected
                   ? 'bg-emerald-950/70 border-emerald-500/40 text-emerald-300'
-                  : 'bg-rose-950/70 border-rose-500/40 text-rose-300 animate-pulse'
+                  : 'bg-cyan-950/70 border-cyan-500/40 text-cyan-300'
               }`}
             >
-              <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-emerald-400 animate-ping' : 'bg-rose-400'}`} />
-              <span className="hidden sm:inline font-semibold">{isConnected ? 'ONLINE' : 'RECONNECTING'}</span>
+              <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-emerald-400 animate-ping' : 'bg-cyan-400'}`} />
+              <span className="hidden sm:inline font-semibold">{isConnected ? 'LIVE (WS)' : 'LIVE (CLOUD)'}</span>
             </div>
 
             {/* System Clock */}

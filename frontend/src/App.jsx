@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 function MainLayout() {
-  const { activePortal, buses, routes, tickets, isLoading } = useTransit();
+  const { activePortal, buses, routes, tickets, isLoading, isConnected } = useTransit();
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [selectedBusForBooking, setSelectedBusForBooking] = useState(null);
 
@@ -190,8 +190,12 @@ function MainLayout() {
             <span>• Full-Stack React + Node.js</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] font-mono">
-            <span>PORT: 5000 (API) / 5173 (CLIENT)</span>
-            <span className="text-emerald-400 font-bold">WEBSOCKET: CONNECTED</span>
+            <span>SMART BUS NETWORK</span>
+            {isConnected ? (
+              <span className="text-emerald-400 font-bold">● WEBSOCKET: CONNECTED</span>
+            ) : (
+              <span className="text-cyan-400 font-bold">● CLOUD SYNC: ACTIVE</span>
+            )}
           </div>
         </div>
       </footer>
